@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Elo Drinks Cores Personalizadas
+				elo: {
+					black: '#101820',
+					terracotta: '#9D4815',
+					olive: '#5A5040',
+					cream: '#E0CEAA',
+					white: '#F7F6F3'
 				}
 			},
 			borderRadius: {
@@ -84,12 +93,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'wave': {
+					'0%': { transform: 'translateX(0)' },
+					'50%': { transform: 'translateX(-10px)' },
+					'100%': { transform: 'translateX(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'wave': 'wave 2s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'wave-pattern': "url('/lovable-uploads/3b2e35b2-3e1d-4eb7-a33d-a0bc3debdda8.png')",
+				'hero-pattern': "linear-gradient(to bottom, rgba(16, 24, 32, 0.7), rgba(16, 24, 32, 0.5)), url('/lovable-uploads/7ddf1570-539f-4787-8fec-184ff0880126.png')"
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
